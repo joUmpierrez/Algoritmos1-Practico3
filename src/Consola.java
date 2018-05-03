@@ -1,4 +1,4 @@
-import java.lang.*;
+
 import java.util.*;
 
 public class Consola {
@@ -9,7 +9,7 @@ public class Consola {
 		String strOpcion;
 		int opciones[] = { 1, 9 };
 		boolean salir = false;
-		int salirCase1, salirCase2, salirCase3, salirCase4, salirCase5, salirCase6, salirCase7, salirCase8, salirCase9;
+		int salirCase1, salirCase2, salirCase3, salirCase4, salirCase5, salirCase6, salirCase7, salirCase8;
 
 		// Carga de Matrices Para [Ejercicio2]
 		int[][] matrizInt3x4A = { { 23, 65, 798, 4 }, { 643, 351, 898, 62 }, { 325, 11, 241, 633 } };
@@ -29,11 +29,10 @@ public class Consola {
 				System.out.println("2 --> Ejercicio 2: Sumar de Matrices");
 				System.out.println("3 --> Ejercicio 2: Resta de Matrices");
 				System.out.println("4 --> Ejercicio 3: Costo Lavarropas segun el Modelo");
-				System.out.println("5 --> Ejercicio 3: Costo Produccion");
-				System.out.println("6 --> Ejercicio 4: Maximo de matriz y su posicion");
-				System.out.println("7 --> Ejercicio 4: Minimo de matriz y su posicion");
-				System.out.println("8 --> Ejercicio 4: Columna del minimo elemento");
-				System.out.println("9 --> Ejercicio 4: Fila del maximo elemento");
+				System.out.println("5 --> Ejercicio 4: Maximo de matriz y su posicion");
+				System.out.println("6 --> Ejercicio 4: Minimo de matriz y su posicion");
+				System.out.println("7 --> Ejercicio 4: Columna del minimo elemento");
+				System.out.println("8 --> Ejercicio 4: Fila del maximo elemento");
 				System.out.println("Ingrese una opcion");
 				strOpcion = entrada.next();
 				if (isNumeric(strOpcion)) {
@@ -93,7 +92,8 @@ public class Consola {
 				break;
 			case 5:
 				do {
-					// Ejercicio
+					System.out.println("Maximo de la Matriz");
+					Ejercicio4.MaximoMatriz(matrizInt5x4A);
 					System.out.println("\n");
 					System.out.println("Ingrese 0 para salir");
 					salirCase5 = entrada.nextInt();
@@ -101,7 +101,8 @@ public class Consola {
 				break;
 			case 6:
 				do {
-					// Ejercicio
+					System.out.println("Minimo de la Matriz");
+					Ejercicio4.MinimoMatriz(matrizInt5x4B);
 					System.out.println("\n");
 					System.out.println("Ingrese 0 para salir");
 					salirCase6 = entrada.nextInt();
@@ -109,7 +110,8 @@ public class Consola {
 				break;
 			case 7:
 				do {
-					// Ejercicio
+					System.out.println("Columna del Minimo de la Matriz");
+					Ejercicio4.ColumnaDelMinimo(matrizInt5x4B);
 					System.out.println("\n");
 					System.out.println("Ingrese 0 para salir");
 					salirCase7 = entrada.nextInt();
@@ -117,19 +119,12 @@ public class Consola {
 				break;
 			case 8:
 				do {
-					// Ejercicio
+					System.out.println("Fila del Maximo de la Matriz");
+					Ejercicio4.FilaDelMaximo(matrizInt5x4A);
 					System.out.println("\n");
 					System.out.println("Ingrese 0 para salir");
 					salirCase8 = entrada.nextInt();
 				} while (salirCase8 != 0);
-				break;
-			case 9:
-				do {
-					// Ejercicio
-					System.out.println("\n");
-					System.out.println("Ingrese 0 para salir");
-					salirCase9 = entrada.nextInt();
-				} while (salirCase9 != 0);
 				break;
 			case 0:
 				salir = true;
